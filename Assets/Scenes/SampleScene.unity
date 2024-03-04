@@ -145,15 +145,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8200543256333508862, guid: 6b10df34f1152a6458e05f3a8b79ce98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.64
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 8200543256333508862, guid: 6b10df34f1152a6458e05f3a8b79ce98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.74
+      value: 7.1
       objectReference: {fileID: 0}
     - target: {fileID: 8200543256333508862, guid: 6b10df34f1152a6458e05f3a8b79ce98, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.78
+      value: -2.68
       objectReference: {fileID: 0}
     - target: {fileID: 8200543256333508862, guid: 6b10df34f1152a6458e05f3a8b79ce98, type: 3}
       propertyPath: m_LocalRotation.w
@@ -531,6 +531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish model 3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2696352284306890703, guid: a01a177894617554f83b7d800c524618, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 967983195}
     - target: {fileID: 5658199545167440390, guid: a01a177894617554f83b7d800c524618, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1155,6 +1159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish model 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2696352284306890703, guid: a01a177894617554f83b7d800c524618, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 967983195}
     - target: {fileID: 5658199545167440390, guid: a01a177894617554f83b7d800c524618, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1457,6 +1465,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220393354}
     m_Modifications:
+    - target: {fileID: -3912959297571812549, guid: 4245ff9a4dd9cd24d8b511911616bf71, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 967983195}
     - target: {fileID: 1534700291726900181, guid: 4245ff9a4dd9cd24d8b511911616bf71, type: 3}
       propertyPath: m_Name
       value: Fish model 2 (1)

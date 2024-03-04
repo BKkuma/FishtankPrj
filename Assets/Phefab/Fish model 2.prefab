@@ -103,7 +103,7 @@ MonoBehaviour:
   acceleration: {x: 0, y: 0, z: 0}
   mass: 0
   arrived_dist: 0
-  target: {fileID: 0}
+  target: {fileID: 8200543256333508862, guid: 6b10df34f1152a6458e05f3a8b79ce98, type: 3}
   agents: []
 --- !u!54 &-2461841430074607910
 Rigidbody:
