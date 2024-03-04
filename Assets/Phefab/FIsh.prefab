@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7675931462091693229}
   m_Layer: 0
   m_Name: FIsh
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,10 +114,9 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   mass: 0
-  arrived_dist: {x: 0, y: 0, z: 0}
+  arrived_dist: 0
   target: {fileID: 8200543256333508862, guid: 6b10df34f1152a6458e05f3a8b79ce98, type: 3}
   agents: []
-  avoidanceDist: 2
 --- !u!54 &7675931462091693229
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -9,11 +9,11 @@ public class Mover : MonoBehaviour
     [SerializeField] private Vector3 velocity;
     [SerializeField] private Vector3 acceleration;
     [SerializeField] private float mass;
-    [SerializeField] private Vector3 arrived_dist;
+    [SerializeField] private float arrived_dist;
     [SerializeField] private Transform target;
     [SerializeField] private Mover[] agents;
-    [SerializeField] private float avoidanceDist = 2.0f;
 
+    private float avoidanceDist = 5.0f;
     private float avoiddanceForce = 6.0f;
     private float cohesionForce = 5.0f;
     private float maxSpeed = 5;
@@ -22,7 +22,7 @@ public class Mover : MonoBehaviour
         velocity = new Vector3(0.0f, 0.0f, 0.0f);
         acceleration = new Vector3(0.0f, 0.0f, 0.0f);
         mass = 1.0f;
-        arrived_dist = new Vector3(0.0f, 0.0f, 0.0f);
+        
 
         agents = gameObject.transform.parent.GetComponentsInChildren<Mover>();
 
@@ -31,18 +31,31 @@ public class Mover : MonoBehaviour
     public void AddForce(Vector3 force)
     {
         acceleration += force / mass;
-    }
-
-    public void Seekto()
+    } 
+    public void SeekTo (  )
     {
-        Vector3 d = target.position - transform.position;
+            Vector3 d = target.position - transform.position;
+            d.Normalize();
+            d *= maxSpeed;
+            Vector3 f = d - velocity;
 
-        Vector3 f = d - velocity;
-        f = f.normalized;
-        f *= maxSpeed;
-        AddForce(f);
+            float distance = (target.position - transform.position).magnitude;
 
+            if (distance < avoidanceDist)
+            {
+                float p = distance / avoidanceDist;
+                float energy = f.magnitude * p;
+                f.Normalize();
+                f *= energy;
+                AddForce(f);
+            }
+            else
+            {
+                velocity *= 0.5f;
+            }
     }
+
+    
 
     private void Avoiddance()
     {
@@ -111,15 +124,8 @@ public class Mover : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            AddForce(new Vector3(50, 0, 0));
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            AddForce(new Vector3(-50, 0, 0));
-        }
-       // Seekto();
+
+        SeekTo();
         Avoiddance();
         Cohesion();
         Alignment();
